@@ -1,0 +1,5 @@
+<Page ux:Class="FirstPage">
+	<Router ux:Dependency="router" />
+
+	<Text Alignment="Center" Value="FirstPage" />
+</Page>

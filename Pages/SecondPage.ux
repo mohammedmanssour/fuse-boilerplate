@@ -1,0 +1,3 @@
+<Page ux:Class="SecondPage">
+	<Router ux:Dependency="router" />
+</Page>

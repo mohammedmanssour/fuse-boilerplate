@@ -1,0 +1,20 @@
+{
+  "name": "fuseboilerplate",
+  "version": "1.0.0",
+  "description": "A base naked template for Fuse apps",
+  "main": "main.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "keywords": [
+    "fusetools",
+    "Fuse",
+    "Fuse",
+    "Boilerplate"
+  ],
+  "author": "Mohammed Manssour",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

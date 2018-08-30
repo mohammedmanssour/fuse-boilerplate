@@ -1,0 +1,6 @@
+build
+.uno
+.build
+.vscode
+.DS_Store
+node_modules/

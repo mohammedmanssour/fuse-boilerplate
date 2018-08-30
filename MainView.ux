@@ -1,0 +1,11 @@
+<App>
+	<Router ux:Name="router" />
+	<JavaScript File="main.js" />
+
+	<ClientPanel>
+		<Navigator DefaultPath="first">
+			<FirstPage ux:Template="first" router="router" />
+			<FirstPage ux:Template="second" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>
