@@ -1,5 +1,5 @@
 <Panel ux:Class="App.ColorPalette">
 	<!-- static globals is that they cannot be changed while the app is running -->
 	<!-- and this is the reason why we're using dynamic resources -->
-	<float4 ux:Key="AppBackground" ux:Value="#7FDBFF" />
+	<float4 ux:Global="AppBackground" ux:Value="#7FDBFF" />
 </Panel>
