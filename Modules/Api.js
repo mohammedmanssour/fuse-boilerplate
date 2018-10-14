@@ -1,6 +1,6 @@
 const Config = require('../Config');
 const Logger = require('./Logger');
-const Observable = require('FuseJS/Observable');
+const Auth = require('./Auth');
 const Uploader = require('Community/Uploader');
 
 function Http(){
@@ -176,11 +176,17 @@ ${Logger.init(response).toString()}
 };
 
 Http.prototype.upload = function(url, file) {
-	return Uploader.send(url, file);
+	return Uploader.send(file, Config.baseUri + '/' + url, this.reqHeaders.Authorization)
 		.then(response => {
-			return Promise.resolve(JSON.prase(response));
-		})
+			return Promise.resolve(JSON.parse(response));
+		});
 };
+
+Http.prototype.authorized = function(){
+	this.reqHeaders.Authorization = "Bearer " + Auth.singleton().token.value
+
+	return this;
+}
 
 /**
  * create new Http instance
