@@ -39,12 +39,15 @@ Auth.prototype.readFromStorage = function() {
 	return Storage.read('token.txt')
 		.then(contents => {
 			if(!contents){
-				return Promise.resolve(false);
+				return Promise.resolve('noinfo');
 			}
 
 			this.token.value = contents;
 			return Promise.resolve(contents);
-		});
+		})
+	.catch(e => {
+		return Promise.resolve('noinfo');
+	})
 };
 
 /**
